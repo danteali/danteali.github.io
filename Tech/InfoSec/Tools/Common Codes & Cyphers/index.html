@@ -1,0 +1,817 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Collection of useful notes on tech, docker, infosec, exercise, etc">
+      
+      
+      
+        <meta name="author" content="Dante">
+      
+      
+        <link rel="canonical" href="https://danteali.github.io/Tech/InfoSec/Tools/Common%20Codes%20%26%20Cyphers/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Common Codes & Cyphers - Dante's Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-takeaways-things-to-remember" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Dante&#39;s Docs" class="md-header__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dante's Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Common Codes & Cyphers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Dante&#39;s Docs" class="md-nav__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dante's Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Dante's Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Exercise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exercise" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Exercise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Exercise/Navigating%20with%20Garmin%20Fenix/" class="md-nav__link">
+        Navigating with Garmin Fenix
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-nav__link">
+        Publishing Obsidian Markdown Files in Github Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        InfoSec
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="InfoSec" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          InfoSec
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_Tools%20%26%20Resources/" class="md-nav__link">
+         Tools & Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2_2">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CTF%20Katana/" class="md-nav__link">
+        CTF Katana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Common Codes & Cyphers
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Common%20Cryptography/" class="md-nav__link">
+        Common Cryptography
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExifTool/" class="md-nav__link">
+        ExifTool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gobuster%20%26%20Dirbuster/" class="md-nav__link">
+        Gobuster & Dirbuster
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../John%20The%20Ripper/" class="md-nav__link">
+        John The Ripper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LOLBAS%20%26%20GTFOBins/" class="md-nav__link">
+        LOLBAS & GTFOBins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinPEAS%20%26%20WinPEAS/" class="md-nav__link">
+        LinPEAS & WinPEAS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Miscellaneous%20Tools/" class="md-nav__link">
+        Miscellaneous Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wordlists/" class="md-nav__link">
+        Wordlists
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Virtual%20Machine%20-%20Linux/" class="md-nav__link">
+        Virtual Machine   Linux
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <table>
+<thead>
+<tr>
+<th>Tags: #tools #ctf #pentesting #infosec #kali #cypher #encoded #code #base #steganography</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<h1 id="key-takeaways-things-to-remember">Key Takeaways / Things to Remember<a class="headerlink" href="#key-takeaways-things-to-remember" title="Permanent link">&para;</a></h1>
+<p>See extensive lists at these links - below are common ones more likely to encounter:
+https://book.hacktricks.xyz/crypto/crypto-ctfs-tricks#encoders
+https://github.com/JohnHammond/ctf-katana#esoteric-languages</p>
+<p>Useful Tools:
+* Multiple decoding tools: https://cryptii.com
+* More decoding tools (including cypher identifier): www.dcode.fr
+* Check all bases with: https://github.com/mufeedvh/basecrack
+* Convert from multiple systems: https://gchq.github.io/CyberChef/</p>
+</blockquote>
+<hr />
+<h1 id="common-codes-cyphers">Common Codes &amp; Cyphers<a class="headerlink" href="#common-codes-cyphers" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/nccgroup/featherduster">Featherbuster</a> by NCC Group can be used to help determine and solve codes.</p>
+<h2 id="bases">Bases<a class="headerlink" href="#bases" title="Permanent link">&para;</a></h2>
+<p>Check all bases with: https://github.com/mufeedvh/basecrack
+And the wiki shows some obscure binary to ascii conversions: https://www.wikiwand.com/en/Binary-to-text_encoding</p>
+<h5 id="base-2-binary">Base 2 / Binary<a class="headerlink" href="#base-2-binary" title="Permanent link">&para;</a></h5>
+<p>[0-1]</p>
+<h5 id="base-8-octal">Base 8 / Octal<a class="headerlink" href="#base-8-octal" title="Permanent link">&para;</a></h5>
+<p>[0-8]</p>
+<h5 id="base16-hexidecimal">Base16 / Hexidecimal<a class="headerlink" href="#base16-hexidecimal" title="Permanent link">&para;</a></h5>
+<p>[0-9A-F]
+Example:</p>
+<pre><code>Hey! This is an example of base16 encoding.
+</code></pre>
+<p>is:</p>
+<pre><code>48657921205468697320697320616E206578616D706C65206F662062617365313620656E636F64696E672E
+</code></pre>
+<p>Decode with: https://simplycalc.com/base16-encode.php</p>
+<h5 id="base32">Base32<a class="headerlink" href="#base32" title="Permanent link">&para;</a></h5>
+<p>[<em>A-Z2-7=</em>]</p>
+<p>Often ends with a multiple <code>=</code> to pad remaining text.</p>
+<p>Example:
+<code>NBXWYYLDMFZGCY3PNRQQ====</code></p>
+<p>Decode at: https://simplycalc.com/base32-encode.php</p>
+<h5 id="base58">Base58<a class="headerlink" href="#base58" title="Permanent link">&para;</a></h5>
+<p>[<em>123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz</em>]</p>
+<p>Example:
+<code>2yJiRg5BF9gmsU6AC</code></p>
+<h5 id="base62">Base62<a class="headerlink" href="#base62" title="Permanent link">&para;</a></h5>
+<p>[<em>0-9A-Za-z</em>]</p>
+<p>Example:
+<code>g2AextRZpBKRBzQ9</code></p>
+<h5 id="base64">Base64<a class="headerlink" href="#base64" title="Permanent link">&para;</a></h5>
+<p>[<em>A-Za-z0-9+/=</em>]</p>
+<p>Often ends with a multiple <code>=</code> to pad remaining text.</p>
+<p>Example:
+<code>aG9sYWNhcmFjb2xh</code></p>
+<p><strong>Linux</strong></p>
+<pre><code>base64 -w0 &lt;file&gt; #Encode file
+base64 -d file #Decode file
+</code></pre>
+<p><strong>Windows</strong></p>
+<pre><code>certutil -encode payload.dll payload.b64
+certutil -decode payload.b64 payload.dll
+</code></pre>
+<h5 id="base85-like-ascii85">Base85 --&gt; Like Ascii85<a class="headerlink" href="#base85-like-ascii85" title="Permanent link">&para;</a></h5>
+<hr />
+<h5 id="morse-code">Morse Code<a class="headerlink" href="#morse-code" title="Permanent link">&para;</a></h5>
+<p>Example:
+<code>.... --- .-.. -.-. .- .-. .- -.-. --- .-.. .-</code></p>
+<p>Decode at:
+* https://morsecode.scphillips.com/translator.html
+* https://gchq.github.io/CyberChef/</p>
+<hr />
+<h5 id="phone-keypad">Phone Keypad<a class="headerlink" href="#phone-keypad" title="Permanent link">&para;</a></h5>
+<p><img alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSySxHjMFv80XWp74LZpfrnAro6a1MLqeF1F3zpguA5PGSW9ov|150" src="https://camo.githubusercontent.com/0a09b3f773f371310cba6af9578b5f296a1864de4554760078d0044cb645ea0d/68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e3a414e643947635153795378486a4d4676383058577037344c5a7066726e41726f3661314d4c7165463146337a706775413550475357396f76" /></p>
+<hr />
+<h5 id="dna">DNA<a class="headerlink" href="#dna" title="Permanent link">&para;</a></h5>
+<p>When given a sequence with only A, C, G, T , there is an online mapping for these. Try this:
+<img alt="img/dna_codes.png|400" src="https://github.com/JohnHammond/ctf-katana/raw/master/img/dna_codes.png" />
+<img alt="img/genome_coding.jpg|300" src="https://github.com/JohnHammond/ctf-katana/raw/master/img/genome-coding.jpg" /></p>
+<hr />
+<h5 id="qr-codes">QR Codes<a class="headerlink" href="#qr-codes" title="Permanent link">&para;</a></h5>
+<hr />
+<h1 id="hashes">Hashes<a class="headerlink" href="#hashes" title="Permanent link">&para;</a></h1>
+<h5 id="md-sha1-sha256-sha512">MD% / SHA1 / SHA256 / SHA512<a class="headerlink" href="#md-sha1-sha256-sha512" title="Permanent link">&para;</a></h5>
+<p>Generate hashes here:
+https://passwordsgenerator.net/sha512-hash-generator/</p>
+<hr />
+<h1 id="cyphers">Cyphers<a class="headerlink" href="#cyphers" title="Permanent link">&para;</a></h1>
+<h5 id="keyboard-shift">Keyboard Shift<a class="headerlink" href="#keyboard-shift" title="Permanent link">&para;</a></h5>
+<p>If you see any thing that has the shape of a sentence but it looks like nonsense letters, and notes some shift left or right, it may be a keyboard shift...</p>
+<p>Decode at: https://www.dcode.fr/keyboard-shift-cipher</p>
+<hr />
+<h5 id="bit-shift">Bit Shift<a class="headerlink" href="#bit-shift" title="Permanent link">&para;</a></h5>
+<p>Sometimes the letters may be shifted by a stated hint, like a binary bit shift ( x &gt;&gt; 1 ) or ( x &lt;&lt; 1 ).</p>
+<hr />
+<h5 id="reversed-text">Reversed Text<a class="headerlink" href="#reversed-text" title="Permanent link">&para;</a></h5>
+<p>Sometimes a "ciphertext" is just as easy as reversed text. Don't forgot to check under this rock! </p>
+<p>You can reverse a string in <a href="https://www.python.org/">Python</a> like so:</p>
+<pre><code class="language-py">&quot;UOYMORFEDIHOTGNIYRTEBTHGIMFTCA.TAHTTERCESASISIHT&quot;[::-1]
+</code></pre>
+<hr />
+<h5 id="simple-substitution">Simple Substitution<a class="headerlink" href="#simple-substitution" title="Permanent link">&para;</a></h5>
+<p>This is simply substituting the letter for the corresponding number in the alphabet. It's a Ceasar Cypher with no shift key.</p>
+<hr />
+<h5 id="ceasar">Ceasar<a class="headerlink" href="#ceasar" title="Permanent link">&para;</a></h5>
+<p>The most classic shift cipher. Substitute the letter for the alphabet number and shift by X.</p>
+<p>Here's a one liner to try all letter positions:</p>
+<pre><code class="language-bash"> cipher='jeoi{geiwev_gmtliv_ws_svmkmrep}' ; for i in {0..25}; do echo $cipher | caesar $i; done
+</code></pre>
+<p>Decode at: www.dcode.fr/caesar-cipher</p>
+<hr />
+<h5 id="rot-13">ROT 13<a class="headerlink" href="#rot-13" title="Permanent link">&para;</a></h5>
+<p>This is a Ceasar Cypher with a shift/key of 13.</p>
+<p>ROT-47 is common too apparently.</p>
+<hr />
+<h5 id="vigenere">Vigenere<a class="headerlink" href="#vigenere" title="Permanent link">&para;</a></h5>
+<p>A keyword is needed</p>
+<pre><code class="language-text">wodsyoidrods
+</code></pre>
+<p>Decode at: 
+- https://www.guballa.de/vigenere-solver
+- https://www.dcode.fr/vigenere-cipher
+- https://www.mygeocachingprofile.com/codebreaker.vigenerecipher.aspx</p>
+<hr />
+<h1 id="steganography">Steganography<a class="headerlink" href="#steganography" title="Permanent link">&para;</a></h1>
+<p>Lots of useful tools, some online.</p>
+<p>See notes here:
+https://github.com/JohnHammond/ctf-katana#steganography</p>
+<p>Notable tools:
+* <a href="http://steghide.sourceforge.net/"><code>steghide</code></a>
+    A command-line tool typically used alongside a password or key, that could be uncovered some other way when solving a challenge.
+- <a href="https://github.com/RickdeJager/stegseek">StegSeek</a>
+    This is similar to <code>stegcracker</code>, but <em>much</em> faster. Can also extract metadata without a password list.
+- <a href="https://github.com/Paradoxis/StegCracker">StegCracker</a>
+    Don't ever forget about <a href="http://steghide.sourceforge.net/"><code>steghide</code></a>! This tool can use a password list like <code>rockyou.txt</code> with steghide. SOME IMAGES CAN HAVE MULTIPLE FILED ENCODED WITH MULTIPLE PASSWORDS.
+- <a href="http://stylesuxx.github.io/steganography/">Steganography Online</a>
+    A tool often used in CTFs for encoding messages into images.
+- <a href="http://www.caesum.com/handbook/stego.htm"><code>Stegsolve.jar</code></a>
+    A <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> <a href="https://en.wikipedia.org/wiki/JAR_(file_format)"><code>.JAR</code></a> tool, that will open an image and let you as the user arrow through different renditions of the image (viewing color channels, inverted colors, and more). The tool is surprisingly useful.
+- <a href="https://www.openstego.com/"><code>openstego</code></a>
+    A <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> <a href="https://en.wikipedia.org/wiki/JAR_(file_format)"><code>.JAR</code></a> tool, that can extract data from an image. A good tool to use on guessing challenges, when you don't have any other leads. We found this tool after the <a href="http://0xahmed.ninja/nullcon-hackim18-ctf-writeups/">Misc50</a> challenge from <a href="https://ctftime.org/event/566">HackIM 2018</a>
+- <a href="https://github.com/zed-0xff/zsteg"><code>zsteg</code></a>
+    Command-line tool for use against Least Significant Bit steganography... unfortunately only works against PNG and BMP images.
+- <a href="https://github.com/lukechampine/jsteg"><code>jsteg</code></a>
+    Another command-line tool to use against JPEG images. Handy for Hackerrank Codefest CTF 2018.
+- <a href="https://sourceforge.net/projects/jstego/">Jstego</a>
+    A GUI tool for JPG steganography. <a href="https://sourceforge.net/projects/jstego/">https://sourceforge.net/projects/jstego/</a> It is a <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> <a href="https://en.wikipedia.org/wiki/JAR_(file_format)">JAR</a> file similar to stegsolve.jar</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../CTF%20Katana/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CTF Katana" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CTF Katana
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Common%20Cryptography/" class="md-footer__link md-footer__link--next" aria-label="Next: Common Cryptography" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Common Cryptography
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>

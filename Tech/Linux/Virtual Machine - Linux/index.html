@@ -1,0 +1,879 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Collection of useful notes on tech, docker, infosec, exercise, etc">
+      
+      
+      
+        <meta name="author" content="Dante">
+      
+      
+        <link rel="canonical" href="https://danteali.github.io/Tech/Linux/Virtual%20Machine%20-%20Linux/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Virtual Machine Linux - Dante's Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#virtual-machine-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Dante&#39;s Docs" class="md-header__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dante's Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Virtual Machine   Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dante&#39;s Docs" class="md-nav__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dante's Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Dante's Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Exercise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exercise" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Exercise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Exercise/Navigating%20with%20Garmin%20Fenix/" class="md-nav__link">
+        Navigating with Garmin Fenix
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-nav__link">
+        Publishing Obsidian Markdown Files in Github Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        InfoSec
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="InfoSec" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          InfoSec
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/_Tools%20%26%20Resources/" class="md-nav__link">
+         Tools & Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2_2">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/CTF%20Katana/" class="md-nav__link">
+        CTF Katana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/Common%20Codes%20%26%20Cyphers/" class="md-nav__link">
+        Common Codes & Cyphers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/Common%20Cryptography/" class="md-nav__link">
+        Common Cryptography
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/ExifTool/" class="md-nav__link">
+        ExifTool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/Gobuster%20%26%20Dirbuster/" class="md-nav__link">
+        Gobuster & Dirbuster
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/John%20The%20Ripper/" class="md-nav__link">
+        John The Ripper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/LOLBAS%20%26%20GTFOBins/" class="md-nav__link">
+        LOLBAS & GTFOBins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/LinPEAS%20%26%20WinPEAS/" class="md-nav__link">
+        LinPEAS & WinPEAS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/Miscellaneous%20Tools/" class="md-nav__link">
+        Miscellaneous Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InfoSec/Tools/Wordlists/" class="md-nav__link">
+        Wordlists
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Virtual Machine   Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Virtual Machine   Linux
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualbox-guest-additions-shared-clipboardfoldersetc" class="md-nav__link">
+    VirtualBox Guest Additions - shared clipboard/folders/etc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-get-keyboard-capture-working-properly" class="md-nav__link">
+    To get keyboard capture working properly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-folders-with-windows-host" class="md-nav__link">
+    Shared folders with Windows host
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-restart" class="md-nav__link">
+    Panel Restart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#give-user-root-permissions-not-recommended-for-production-systems" class="md-nav__link">
+    Give user root permissions (not recommended for production systems)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-root-login-not-recommended-for-production-systems" class="md-nav__link">
+    Enable root login (not recommended for production systems)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualbox-guest-additions-shared-clipboardfoldersetc" class="md-nav__link">
+    VirtualBox Guest Additions - shared clipboard/folders/etc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-get-keyboard-capture-working-properly" class="md-nav__link">
+    To get keyboard capture working properly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-folders-with-windows-host" class="md-nav__link">
+    Shared folders with Windows host
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-restart" class="md-nav__link">
+    Panel Restart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#give-user-root-permissions-not-recommended-for-production-systems" class="md-nav__link">
+    Give user root permissions (not recommended for production systems)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-root-login-not-recommended-for-production-systems" class="md-nav__link">
+    Enable root login (not recommended for production systems)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <table>
+<thead>
+<tr>
+<th>Tags: #linux #virtual-machine #ubuntu #kali</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="virtual-machine-linux">Virtual Machine - Linux<a class="headerlink" href="#virtual-machine-linux" title="Permanent link">&para;</a></h1>
+<p>Generally using VirtualBox for VMs, including replication of NAS environment to test things before intro to production.</p>
+<p>Below is a sample of notes which have come in handy when setting up VMs.</p>
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<p>For Kali, see: https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/</p>
+<h2 id="virtualbox-guest-additions-shared-clipboardfoldersetc">VirtualBox Guest Additions - shared clipboard/folders/etc<a class="headerlink" href="#virtualbox-guest-additions-shared-clipboardfoldersetc" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Note that in Kali, you can install VB Guest Additions from command line without the virtual CD function, see <a href="https://www.kali.org/docs/virtualization/install-virtualbox-guest-additions/">here</a>. 
+We're going to search the package manager for the guest additions package first to confirm the package name.
+Note that the <code>--reinstall</code> is important as we want to make sure we're not leaving anything pre-existing installed.
+Run:
+<code>bash
+sudo apt update
+sudo apt-cache search virtualbox-guest
+sudo apt install -y --reinstall virtualbox-guest-x11
+sudo shutdown -r now</code></p>
+</blockquote>
+<p>Inside VM go to <code>Devices menu -&gt; Insert Guest Additions CD image menu</code></p>
+<p>Use the following command to mount the CD</p>
+<pre><code class="language-bash">sudo mount /dev/cdrom /media/cdrom
+</code></pre>
+<p>Install dependencies for VirtualBox guest additions:</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install build-essential linux-headers-`uname -r`
+</code></pre>
+<p>Run installation script for the guest additions:</p>
+<pre><code class="language-bash">sudo /media/cdrom/./VBoxLinuxAdditions.run
+</code></pre>
+<blockquote>
+<p>If you get a <code>permission denied</code> error when running the executable (even when running as root) it may be due to a security setting to prevent the direct execution of binaries on the mounted CD...
+<br>
+From <a href="https://forums.virtualbox.org/viewtopic.php?f=3&amp;t=58799">source</a>:
+...the filesystem is mounted with the noexec option, so the execute permission bits on all files are ignored, and you cannot directly execute any program residing on this filesystem. Note that the noexec mount option is implied by the user option in <code>/etc/fstab</code>. ... If you use user and want to have executable files, use user,exec.<br />
+<br>
+ To fix, either run mount command with exec option:
+Or edit <code>/etc/fstab</code> to change
+<code>bash
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0</code>
+To
+<code>bash
+/dev/sr0        /media/cdrom0   udf,iso9660 user,exec     0       0</code></p>
+</blockquote>
+<p>Reboot</p>
+<pre><code class="language-bash">sudo shutdown -r now
+</code></pre>
+<h2 id="to-get-keyboard-capture-working-properly">To get keyboard capture working properly<a class="headerlink" href="#to-get-keyboard-capture-working-properly" title="Permanent link">&para;</a></h2>
+<p>Reboot after first boot worked for me. Below should work otherwise.</p>
+<p>Select keyboard from Menu Option initially to allow typing.</p>
+<p>Install dependencies:</p>
+<pre><code class="language-bash">sudo apt-get install scim-bridge-client-qt scim-bridge-client-qt4 scim-bridge-client-gtk
+</code></pre>
+<h2 id="shared-folders-with-windows-host">Shared folders with Windows host<a class="headerlink" href="#shared-folders-with-windows-host" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Install guest additions per above note</li>
+<li>Open VirtualBox</li>
+<li>Right-click your VM, then click Settings</li>
+<li>Go to Shared Folders section</li>
+<li>Add a new shared folder</li>
+<li>On Add Share prompt, select the Folder Path in your host that you want to be accessible inside your VM.</li>
+<li>In the Folder Name field, type shared</li>
+<li>Uncheck Read-only and Auto-mount, and check Make Permanent</li>
+<li>Start your VM</li>
+</ol>
+<h2 id="panel-restart">Panel Restart<a class="headerlink" href="#panel-restart" title="Permanent link">&para;</a></h2>
+<p>In Kali 2021, using xfce4 (for the first time), the panel (taskbar) can disappear after a lock/unlock. </p>
+<p>To restart the panel, run:</p>
+<pre><code class="language-bash">nohup xfce4-panel &amp;
+</code></pre>
+<h2 id="give-user-root-permissions-not-recommended-for-production-systems">Give user root permissions (not recommended for production systems)<a class="headerlink" href="#give-user-root-permissions-not-recommended-for-production-systems" title="Permanent link">&para;</a></h2>
+<p>To give the user "foo" unlimited passwordless access to root privileges via the sudo command, edit <code>/etc/sudoers</code> by running <code>sudo visudo</code> and add the line:</p>
+<pre><code class="language-bash">foo ALL = NOPASSWD: ALL
+</code></pre>
+<h2 id="enable-root-login-not-recommended-for-production-systems">Enable root login (not recommended for production systems)<a class="headerlink" href="#enable-root-login-not-recommended-for-production-systems" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.ubuntugeek.com/enable-and-disable-ubuntu-root-password.html">Source</a></p>
+<p>Suggest only doing this for initial set up to save time. Also check notes on SSH auto-login.</p>
+<pre><code class="language-bash">sudo passwd root
+</code></pre>
+<p>Edit SSH config</p>
+<pre><code class="language-bash">nano /etc/ssh/sshd_config
+</code></pre>
+<p>and add/uncomment the following line:</p>
+<pre><code class="language-bash">PermitRootLogin yes
+</code></pre>
+<p>Can now log in via ssh with username root &amp; password you set up above. </p>
+<p>Once config complete, edit ssh config again and also disable root log in with:</p>
+<pre><code class="language-bash">passwd -l root
+</code></pre>
+<p>While here, disable the ‘waiting for network config’ message on startup when LAN unplugged:</p>
+<pre><code class="language-bash">nano /etc/init/failsafe.conf
+</code></pre>
+<p>Change the sleep values to 10 and this will cause it to wait for only 10 secs.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../SSH/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SSH" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SSH
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>

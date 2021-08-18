@@ -1,0 +1,819 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Collection of useful notes on tech, docker, infosec, exercise, etc">
+      
+      
+      
+        <meta name="author" content="Dante">
+      
+      
+        <link rel="canonical" href="https://danteali.github.io/Tech/InfoSec/_Tools%20%26%20Resources/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Tools & Resources - Dante's Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-takeaways-things-to-remember" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Dante&#39;s Docs" class="md-header__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dante's Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+               Tools & Resources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dante&#39;s Docs" class="md-nav__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dante's Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Dante's Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Exercise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exercise" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Exercise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Exercise/Navigating%20with%20Garmin%20Fenix/" class="md-nav__link">
+        Navigating with Garmin Fenix
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-nav__link">
+        Publishing Obsidian Markdown Files in Github Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        InfoSec
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="InfoSec" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          InfoSec
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+         Tools & Resources
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2_2">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/CTF%20Katana/" class="md-nav__link">
+        CTF Katana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Common%20Codes%20%26%20Cyphers/" class="md-nav__link">
+        Common Codes & Cyphers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Common%20Cryptography/" class="md-nav__link">
+        Common Cryptography
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/ExifTool/" class="md-nav__link">
+        ExifTool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Gobuster%20%26%20Dirbuster/" class="md-nav__link">
+        Gobuster & Dirbuster
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/John%20The%20Ripper/" class="md-nav__link">
+        John The Ripper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/LOLBAS%20%26%20GTFOBins/" class="md-nav__link">
+        LOLBAS & GTFOBins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/LinPEAS%20%26%20WinPEAS/" class="md-nav__link">
+        LinPEAS & WinPEAS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Miscellaneous%20Tools/" class="md-nav__link">
+        Miscellaneous Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Wordlists/" class="md-nav__link">
+        Wordlists
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Virtual%20Machine%20-%20Linux/" class="md-nav__link">
+        Virtual Machine   Linux
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <table>
+<thead>
+<tr>
+<th>Tags: #ctf #pentesting #tools #apps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<h1 id="key-takeaways-things-to-remember">Key Takeaways / Things to Remember<a class="headerlink" href="#key-takeaways-things-to-remember" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Check out John Hammond's <a href="https://github.com/JohnHammond/ctf-katana">CTF Katana</a></li>
+</ol>
+</blockquote>
+<hr />
+<h1 id="tools-resources">Tools &amp; Resources<a class="headerlink" href="#tools-resources" title="Permanent link">&para;</a></h1>
+<p>Below are details of tools and resources picked up related to pen testing, cyphers, crypto, etc.</p>
+<p>In particular aimed at solving CTFs, etc</p>
+<h1 id="kids-learning">Kids Learning<a class="headerlink" href="#kids-learning" title="Permanent link">&para;</a></h1>
+<p>Before I forget here are some sites which could be useful for James to learn crypto basics and coding/scripting:
+* https://blockly.games/maze?lang=en&amp;level=4&amp;skin=1 
+* https://www.codemonkey.com/
+* http://www.crunchzilla.com/code-monster
+* https://www.cryptoclub.org/#vAllTools
+* https://www.makewonder.com/robots/dash/
+* https://smile.amazon.co.uk/Wonder-Workshop-DA01-Dash-Robot/dp/B00SKURVKY/ref=sr_1_2?dchild=1&amp;keywords=wonder+workshop&amp;qid=1628803680&amp;sr=8-2</p>
+<h1 id="reading">Reading<a class="headerlink" href="#reading" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<h6 id="ctf-katana-john-hammond">CTF Katana (John Hammond)<a class="headerlink" href="#ctf-katana-john-hammond" title="Permanent link">&para;</a></h6>
+<ul>
+<li><a href="https://github.com/JohnHammond/ctf-katana">CTF Katana</a></li>
+<li>And this Katana tool which automates a bunch of the simple stuff: 
+    https://github.com/JohnHammond/katana 
+    https://ctf-katana.readthedocs.io/en/latest/</li>
+<li>And John's YouTube channel: https://youtu.be/xl2Xx5YOKcI</li>
+</ul>
+</li>
+<li>
+<h6 id="hacktricks-peass-carlos-polop">Hacktricks / PEASS (Carlos Polop)<a class="headerlink" href="#hacktricks-peass-carlos-polop" title="Permanent link">&para;</a></h6>
+<ul>
+<li>https://book.hacktricks.xyz/</li>
+<li>https://github.com/carlospolop/PEASS-ng
+    And the DC29 Offensive Security talk: https://www.youtube.com/watch?v=9_fJv_weLU0</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>https://github.com/swisskyrepo/PayloadsAllTheThings  - payload for basically every scenario</li>
+<li>Good methodology: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources</li>
+<li>https://cryptokait.com/workshops/national-cyber-league-coaching-guide-v-2-1/ncl-coaching-guide-resources-by-category/<ul>
+<li>https://cryptokait.com/2020/03/04/a-beginners-guide-to-scanning-with-dirbuster-for-the-ncl-games/</li>
+</ul>
+</li>
+<li>https://capture.tf/files/CTF-Preparation-Guide.pdf
+    LOADS of info on lost of common CFT puzzles incl cyphers</li>
+<li>https://resources.infosecinstitute.com/topic/tools-of-trade-and-resources-to-prepare-in-a-hacker-ctf-competition-or-challenge/#gref</li>
+<li>https://www.hacksplaining.com/</li>
+<li>https://null-byte.wonderhowto.com/</li>
+</ul>
+<h1 id="to-do">To-do<a class="headerlink" href="#to-do" title="Permanent link">&para;</a></h1>
+<h5 id="url-testing-script">URL Testing Script<a class="headerlink" href="#url-testing-script" title="Permanent link">&para;</a></h5>
+<h1 id="todo-low">todo-low<a class="headerlink" href="#todo-low" title="Permanent link">&para;</a></h1>
+<p>This happened multiple times during the DC29 badge challenge - we had to check for various URL combinations. Write a script to create URL permutations and test for valid URL responses at those locations.</p>
+<p>Requirements:
+- should check curl response for non-404s
+- should have timing capability e.g. how long last response took, avg response, % complete, expected completion
+- need to be able to pull from file to try
+- need to be able to generate own paths from permutations of strings.</p>
+<p>This will do it for us already but can be detected by targets (defcon.org detected my post-conference testing)
+* <a href="../Tools/Gobuster%20%26%20Dirbuster/">Gobuster</a> to enumerate URLs
+* <a href="https://www.hackers-arise.com/creating-a-custom-wordlist-with-cru">crunch</a> or 'Combinator' to generate wordlists based on permutations of strings.
+* Maybe... <a href="https://www.screamingfrog.co.uk/seo-spider/">Screaming Frog</a></p>
+<h6 id="script-infosourceshelp">Script info/sources/help<a class="headerlink" href="#script-infosourceshelp" title="Permanent link">&para;</a></h6>
+<p><strong>Generating Permutations</strong>
+* https://stackoverflow.com/questions/47905379/bash-permutation-with-list-of-words
+* https://stackoverflow.com/questions/3846123/generating-permutations-using-bash
+* Use the tool ‘crunch’ to generate permutations: https://pentestlab.blog/2012/07/12/creating-wordlists-with-crunch/</p>
+<pre><code class="language-bash">_./crunch 1 1 -p word1 word2 word3_
+</code></pre>
+<p><strong>Checking URLs</strong>
+* https://stackoverflow.com/questions/28099637/how-do-you-bulk-test-url-redirections
+* https://stackoverflow.com/questions/35644789/bulk-url-checker-macro-excel
+* https://stackoverflow.com/questions/6136022/script-to-get-the-http-status-code-of-a-list-of-urls
+* <em>PHP</em>
+    * https://stackoverflow.com/questions/36735364/bulk-link-checker-in-php
+    * https://stackoverflow.com/questions/34173636/trying-to-get-this-php-code-to-work-for-bulk-action
+* <em> Python</em>
+    * https://stackoverflow.com/questions/53894401/bulk-http-status-requests
+    * https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file
+    * https://stackoverflow.com/questions/64724802/python-bulk-httpresponse-check
+        * https://docs.aiohttp.org/en/stable/</p>
+<h1 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h1>
+<h6 id="kali">Kali<a class="headerlink" href="#kali" title="Permanent link">&para;</a></h6>
+<ul>
+<li>https://null-byte.wonderhowto.com/how-to/setup-practice-ctfs-from-vulnhub-kali-linux-0170228/</li>
+<li><a href="https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/">https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/</a></li>
+<li><a href="https://www.offensive-security.com/metasploit-unleashed/">https://www.offensive-security.com/metasploit-unleashed/</a></li>
+</ul>
+<h6 id="ghidra">Ghidra<a class="headerlink" href="#ghidra" title="Permanent link">&para;</a></h6>
+<ul>
+<li>[ghidra](https://github.com/NationalSecurityAgency/ghidra </li>
+<li>https://www.shogunlab.com/blog/2019/04/12/here-be-dragons-ghidra-0.html </li>
+<li>https://ghidra.re/courses/GhidraClass/Beginner/Introduction_to_Ghidra_Student_Guide_withNotes.html#Introduction_to_Ghidra_Student_Guide.html 
+<br></li>
+<li>Uf2 stuff<ul>
+<li><a href="https://github.com/wyattearp/ghidra_uf2loader">uf2 plugin</a></li>
+<li>https://github.com/kjcolley7/UF2-IDA-Loader</li>
+<li>https://github.com/fkie-cad/FACT_core </li>
+<li>https://github.com/Microsoft/uf2#files-exposed-by-bootloaders</li>
+</ul>
+</li>
+</ul>
+<h1 id="cyphers-bases">Cyphers &amp; Bases<a class="headerlink" href="#cyphers-bases" title="Permanent link">&para;</a></h1>
+<p>Common examples in CTFs:
+* hex
+* ascii
+* base-16
+<br>
+* rot 13
+* rot 47
+* Caesar Cipher
+* Vigenère Cipher (including the autokey variant)
+* Beaufort Cipher (including the autokey variant)
+* Playfair Cipher
+* Two-Square/Double Playfair Cipher</p>
+<h5 id="cypher-identifiers">Cypher identifiers<a class="headerlink" href="#cypher-identifiers" title="Permanent link">&para;</a></h5>
+<ul>
+<li>https://www.boxentriq.com/code-breaking/cipher-identifier</li>
+<li>https://www.dcode.fr/cipher-identifier</li>
+</ul>
+<h5 id="decrypters">Decrypters<a class="headerlink" href="#decrypters" title="Permanent link">&para;</a></h5>
+<ul>
+<li>www.dcode.fr/caesar-cipher</li>
+<li>www.dcode.fr/vigenere-cipher</li>
+<li>www.dcode.fr/ascii-code</li>
+</ul>
+<h1 id="misc-toolstoolkits">Misc Tools/Toolkits<a class="headerlink" href="#misc-toolstoolkits" title="Permanent link">&para;</a></h1>
+<ul>
+<li>https://github.com/JohnHammond/ctf-katana</li>
+<li>https://github.com/eugenekolo/sec-tools</li>
+<li>https://github.com/zardus/ctf-tools
+<br></li>
+<li>Gobuster - URL tester</li>
+<li>Dirbuster </li>
+<li>Enum4linux - enumerate services</li>
+<li>Hydra - password guesser</li>
+<li>LinPeas - Priv esc awesome script https://github.com/carlospolop/PEASS-ng</li>
+<li>John the ripper 
+    Including how to turn common files into stuff that JTR can run against e.g. id_rsa SSH keys</li>
+<li>Rock you word lists</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publishing Obsidian Markdown Files in Github Pages" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Publishing Obsidian Markdown Files in Github Pages
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Tools/CTF%20Katana/" class="md-footer__link md-footer__link--next" aria-label="Next: CTF Katana" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CTF Katana
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Collection of useful notes on tech, docker, infosec, exercise, etc">
+      
+      
+      
+        <meta name="author" content="Dante">
+      
+      
+        <link rel="canonical" href="https://danteali.github.io/Exercise/Navigating%20with%20Garmin%20Fenix/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Navigating with Garmin Fenix - Dante's Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-takeaways-things-to-remember" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Dante&#39;s Docs" class="md-header__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dante's Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Navigating with Garmin Fenix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dante&#39;s Docs" class="md-nav__button md-logo" aria-label="Dante's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dante's Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Dante's Docs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Exercise
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exercise" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Exercise
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Navigating with Garmin Fenix
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-nav__link">
+        Publishing Obsidian Markdown Files in Github Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        InfoSec
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="InfoSec" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          InfoSec
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/_Tools%20%26%20Resources/" class="md-nav__link">
+         Tools & Resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2_2">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/CTF%20Katana/" class="md-nav__link">
+        CTF Katana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/Common%20Codes%20%26%20Cyphers/" class="md-nav__link">
+        Common Codes & Cyphers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/Common%20Cryptography/" class="md-nav__link">
+        Common Cryptography
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/ExifTool/" class="md-nav__link">
+        ExifTool
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/Gobuster%20%26%20Dirbuster/" class="md-nav__link">
+        Gobuster & Dirbuster
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/John%20The%20Ripper/" class="md-nav__link">
+        John The Ripper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/LOLBAS%20%26%20GTFOBins/" class="md-nav__link">
+        LOLBAS & GTFOBins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/LinPEAS%20%26%20WinPEAS/" class="md-nav__link">
+        LinPEAS & WinPEAS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/Miscellaneous%20Tools/" class="md-nav__link">
+        Miscellaneous Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/InfoSec/Tools/Wordlists/" class="md-nav__link">
+        Wordlists
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/Linux/SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tech/Linux/Virtual%20Machine%20-%20Linux/" class="md-nav__link">
+        Virtual Machine   Linux
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <table>
+<thead>
+<tr>
+<th>Tags: #garmin #hike #cycle #gps #gpx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<h1 id="key-takeaways-things-to-remember">Key Takeaways / Things to Remember<a class="headerlink" href="#key-takeaways-things-to-remember" title="Permanent link">&para;</a></h1>
+</blockquote>
+<hr />
+<h1 id="navigating-with-garmin-fenix-and-forerunner">Navigating with Garmin Fenix (and Forerunner)<a class="headerlink" href="#navigating-with-garmin-fenix-and-forerunner" title="Permanent link">&para;</a></h1>
+<p>Some Garmin watches, including the Fenix, have a 'Navigation' function which can display minimalist maps on screen during activities. It is fairly trivial to get routes onto the watch and display them.</p>
+<p>Another mechanism is to use one of the 3rd party apps for the watches which tend to have more functionality than the Navigation function. They also work with more models, even if the model has no Nav function. </p>
+<p>I've used <a href="https://dynamicwatch.zendesk.com/hc/en-us/articles/360007071432-How-it-works">dynamicWatch</a> in the past on non-Fenix watches to display maps during multi-day hikes. </p>
+<h2 id="find-gps-file-for-your-route-or-make-one">Find GPS file for your route - or make one.<a class="headerlink" href="#find-gps-file-for-your-route-or-make-one" title="Permanent link">&para;</a></h2>
+<h4 id="finding-gps-route-files">Finding GPS route files<a class="headerlink" href="#finding-gps-route-files" title="Permanent link">&para;</a></h4>
+<p>Depending on route, it can be fairly easy to find GPS files - usually saved in GPX format.
+Bike routes can be searched for in various locations including:
+* https://www.gmap-pedometer.com/
+* https://ridewithgps.com/find
+* For Munros:
+    * https://www.walkhighlands.co.uk/perthshire/schiehallion.shtml
+    * https://www.haroldstreet.org.uk/waypoints/download/?hillnumber=314</p>
+<h4 id="making-gps-route-files">Making GPS route files<a class="headerlink" href="#making-gps-route-files" title="Permanent link">&para;</a></h4>
+<p>We can make a route using various tools. </p>
+<h6 id="online-tools-these-let-you-save-and-export-routes">Online Tools (these let you save and export routes):<a class="headerlink" href="#online-tools-these-let-you-save-and-export-routes" title="Permanent link">&para;</a></h6>
+<ul>
+<li>https://ridewithgps.com/routes<ul>
+<li>Export as GPX 'track' file for more granular mapping (i.e. more points in route).</li>
+<li>Export as GPX 'route' file for less granularity.</li>
+</ul>
+</li>
+<li>https://www.plotaroute.com/myroutes</li>
+<li>https://www.gmap-pedometer.com/</li>
+<li>Or in the online <a href="https://connect.garmin.com/modern">Garmin Connect</a> app</li>
+</ul>
+<h6 id="desktop-tools">Desktop Tools<a class="headerlink" href="#desktop-tools" title="Permanent link">&para;</a></h6>
+<p>See notes <a href="./#^19d51d">below</a> on various Windows tools available but my preferred solution is <a href="./#^8085bc">JGPSTrackEdit</a></p>
+<p><a href="./#^25ee35">GPXSee</a> is a close second for viewing files but doesn't allow conversion.</p>
+<p>I've also heard reasonable things about <a href="https://www.garmin.com/en-US/shop/downloads/basecamp">Garmin's Basecamp</a> app. You can create a route directly Basecamp, even if you didn’t buy their maps. Before you start, you need to install some free routable maps. <a href="https://www.gpsfiledepot.com/maps/state/all">GPSFileDepot</a> is a good place to start. Of note are the <a href="https://www.gmaptool.eu/en/content/usa-osm-topo-routable">Open Street Map topographic routable</a> and the <a href="https://garmin.openstreetmap.nl/">Open Street Map routable bicycle</a> (it has trails). Each source has it’s own install directions, read them carefully.
+Once your maps have been installed, you can access them in <a href="https://www.garmin.com/en-US/shop/downloads/basecamp">Garmin Basecamp</a>.</p>
+<hr />
+<h2 id="convert-the-route-file">Convert the route file<a class="headerlink" href="#convert-the-route-file" title="Permanent link">&para;</a></h2>
+<p>Not all route file-types are supported. Typically the GPX file type is supported. The other file types (KML, FIT, ect) can be converted to GPX using the tools above. </p>
+<hr />
+<h2 id="import-to-watch-navigation-capable-watches">Import to Watch - Navigation-Capable Watches<a class="headerlink" href="#import-to-watch-navigation-capable-watches" title="Permanent link">&para;</a></h2>
+<p>For watches with the Navigation function, you simply need to get the route file onto the watch. This can be done via:
+1. The online <a href="https://connect.garmin.com/modern">Garmin Connect</a> app
+    * Training -&gt; Courses -&gt; Import (top right)
+        <em>Turn off uBlock or other similar extensions</em>
+    * Once Course imported/created, select the 'Send To Device' option.
+    * It will sync to the watch when next sync'ing via wifi, or the Garmin Connect phone app.
+2. The Windows <a href="https://www.garmin.com/en-US/software/express/windows/">Garmin Express</a> app.
+3. </p>
+<hr />
+<h2 id="import-to-watch-non-navigation-capable-watches">Import to Watch - Non-Navigation-Capable Watches<a class="headerlink" href="#import-to-watch-non-navigation-capable-watches" title="Permanent link">&para;</a></h2>
+<p>You'll need an app to display the route on non-Nav capable devices. There are multiple map apps for the watches. When I last used this properly it was back in 2014 and I used <a href="https://dynamicwatch.zendesk.com/hc/en-us/articles/360007071432-How-it-works">dynamicWatch</a> in the past on non-Fenix watches to display maps during multi-day hikes. </p>
+<p>But there appear to be many more similar maps available now. Suggest checking them out if you need to add routes to non-Nav watches.</p>
+<h6 id="useful-guides">Useful guides<a class="headerlink" href="#useful-guides" title="Permanent link">&para;</a></h6>
+<p>ForeRunner 305: https://beige-alert.livejournal.com/185138.html
+Edge 305: https://frank.kinlan.co.uk/garmin-edge-305-route-planing-tutorial/</p>
+<hr />
+<h2 id="tool-list">Tool List<a class="headerlink" href="#tool-list" title="Permanent link">&para;</a></h2>
+<p>Additional tools which may come in handy.</p>
+<h3 id="convert-gps-file-types">Convert GPS file types<a class="headerlink" href="#convert-gps-file-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>http://www.gpsies.com/convert.do</li>
+<li><a href="https://www.gpsvisualizer.com/">GPSVisualizer</a></li>
+<li>Windows - <a href="./#^10f626">GPSBabel</a>
+    GPSBabel converts waypoints, tracks, and routes between popular GPS receivers such as Garmin or Magellan and mapping programs like Google Earth or Basecamp. Literally hundreds of GPS receivers and programs are supported.</li>
+</ul>
+<h3 id="windows-view-edit-gps-files">Windows View / Edit GPS files<a class="headerlink" href="#windows-view-edit-gps-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://sourceforge.net/projects/jgpstrackedit/">JGPSTrackEdit</a>
+    JGPSTrackEdit is a free, portable, open source GPX viewer and editor for Windows. It is a Java based GPX file viewer which requires Java to be installed to work. Apart from GPX, you can view a variety of routes and GIS data files using it. Some of the supported file formats in it include TCX, KML, ASC, etc. ^8085bc</li>
+<li><a href="https://www.gpxsee.org/index.html">GPXSee</a>
+     Free open source GPX viewer for Windows. As it’s name suggests, it is a dedicated GPX file viewer that also supports many more file formats to view GPS data such as IGC, FIT, KML, SLF, TCX, etc. It lets you view GIS data, GPS data, Cadence, Speed, Elevation, Distance, and more. ^25ee35</li>
+<li><a href="https://sourceforge.net/projects/viking/">Viking</a>
+    Free open source GPX viewer for Windows. It is good GPS data viewer and analyzer software which you can use to view GPX file. Apart from GPX, it also supports KML file formats to view routes and waypoints. You can also edit tracks and routes using this software.</li>
+<li><a href="https://activityworkshop.net/software/gpsprune/">GpsPrune</a>
+    Free open source GPX viewer software for Windows. It a nice JAVA based software that lets you view GPS data by importing various files including GPX. It allows you to view and analyze GPX file with a lot of useful tools. You can view all tracks, routes, waypoints, etc., from GPX files with respective details. Plus, you can also modify GPX files as it provides a lot of GPS data editing tools.</li>
+<li><a href="https://sourceforge.net/projects/gpxeditor/">GPX Editor</a>
+    Free open source GPX editor that you can use to view GPX files. It is a portable GPX file viewer that you can use on the go. You can also view NMEA, KML, NGT, and LOG files in it.</li>
+<li>(Win Store) <a href="https://www.microsoft.com/en-gb/p/gpx-viewer-and-recorder/9nblggh4w2z7?activetab=pivot:overviewtab">GPX viewer and recorder</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Dante&#39;s Docs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Dante's Docs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Tech/Publishing%20Obsidian%20Markdown%20Files%20in%20Github%20Pages/" class="md-footer__link md-footer__link--next" aria-label="Next: Publishing Obsidian Markdown Files in Github Pages" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Publishing Obsidian Markdown Files in Github Pages
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>
