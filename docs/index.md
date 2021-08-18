@@ -1,11 +1,18 @@
-# Obsidian Notes
+# Dante's Docs
 
-Publish your public notes with MkDocs
+**Currently testing the capability/configuration of GitHub Pages and MkDocs**
 
-## Hello World - edited!
+<br>
 
-The `index.md` in the `/docs` folder is the homepage you see here.
+**Only uploaded a sample of files for the moment. Hopefully you'll still find the useful while I continue playing with the site configuration.**
 
-The folders in `/docs` appear as the main sections on the navigation bar.
+This site is mainly a repository of my own notes which I've compiled over the last few years. The general purpose of the notes is to help me remember things. And this site helps as a backup to my local storage (not the only backup!).
 
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
+The notes also form something of a 'living document' which get updated as a learn more about a topic.
+
+Hopefully some of these will be crawled by Google and will help other solve issues that I've come acorss, or provide a shortcut to some of the things I had to spend a lot of time reaserching.
+
+Good Luck.
+
+
+
