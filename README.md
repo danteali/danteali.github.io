@@ -1,4 +1,4 @@
-**At the moment this is just hosting some test pages but they may be useful for some people in any case. A more robust/complete set of notes/articles will be uploaded in due course***
+**At the moment this is just hosting some test pages but they may be useful for some people in any case. A more robust/complete set of notes/articles will be uploaded in due course**
 
 <br>
 
