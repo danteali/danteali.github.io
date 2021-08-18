@@ -1,8 +1,4 @@
-site_name: Dante's Docs
-site_url: https://danteali.github.io/
-site_author: Dante
-site_description: >-
-  Collection of useful notes on tech, docker, infosec, exercise, etc
+site_name: obsidian-mkdocs template
 
 theme:
     name: 'material'
@@ -44,4 +40,4 @@ markdown_extensions:
 
 plugins:
   - search
-#  - roamlinks 
+  - roamlinks 

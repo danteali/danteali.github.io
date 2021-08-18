@@ -4,14 +4,25 @@ on:
     branches:
       - master
       - main
+
 jobs:
   deploy:
+    name: Build Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python runtime
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-roamlinks-plugin
-      - run: mkdocs gh-deploy --force
+
+      - name: Install Python dependencies      
+        run: |
+          pip install mkdocs-material
+#          pip install mkdocs-roamlinks-plugin
+      
+      - name: Deploy Pages      
+        run: mkdocs gh-deploy --force

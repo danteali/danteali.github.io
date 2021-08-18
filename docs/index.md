@@ -1,6 +1,7 @@
 # Dante's Docs
 
 **Currently testing the capability/configuration of GitHub Pages and MkDocs**
+**Along with ironing out some of the differences in markdown syntax between Obsidian and Github**
 
 <br>
 

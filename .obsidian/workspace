@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "a00dca901cb3fea2",
+    "type": "split",
+    "children": [
+      {
+        "id": "6970bf1b37368d7a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "docs/Tech/InfoSec/Tools/Miscellaneous Tools.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fb1833e11cfb9a2c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b61f7b5e10952d48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42f1fcf6c16053d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5dd26a4a0fdd1ab4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f46f12424c0e14b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f22e6f0186bf825",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be8db5cdb893ef35",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Tech/InfoSec/Tools/Miscellaneous Tools.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "6970bf1b37368d7a",
+  "lastOpenFiles": [
+    "docs/Tech/InfoSec/Tools/Miscellaneous Tools.md",
+    "docs/Tech/InfoSec/Tools/John The Ripper.md",
+    "docs/Tech/InfoSec/Tools/Gobuster & Dirbuster.md",
+    "docs/Tech/InfoSec/Tools/ExifTool.md",
+    "docs/Tech/InfoSec/Tools/Common Cryptography.md",
+    "docs/Tech/InfoSec/Tools/CTF Katana.md",
+    "docs/Tech/InfoSec/Tools/Common Codes & Cyphers.md",
+    "docs/Tech/InfoSec/_Tools & Resources.md",
+    "docs/Tech/Linux/Virtual Machine - Linux.md",
+    "docs/Tech/Linux/SSH.md"
+  ]
+}
